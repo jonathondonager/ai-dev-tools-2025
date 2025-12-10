@@ -6,7 +6,7 @@ const Game = ({ user }) => {
     <div>
       <h2>Playing as {user.username}</h2>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <GameBoard />
+        <GameBoard user={user} />
       </div>
     </div>
   );
