@@ -15,7 +15,7 @@ function App() {
           path="/game" 
           element={user ? <Game user={user} /> : <Navigate to="/login" />} 
         />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home user={user} />} />
       </Routes>
     </Router>
   );

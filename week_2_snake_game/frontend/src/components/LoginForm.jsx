@@ -11,7 +11,7 @@ const LoginForm = ({ setUser }) => {
     if (!username) return;
     const user = await login(username, 'password');
     setUser(user);
-    navigate('/');
+    navigate('/game');
   };
 
   return (
