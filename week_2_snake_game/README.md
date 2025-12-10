@@ -1,24 +1,50 @@
-# Week 2: Snake Game
+# Coding Interview Platform
 
-This project is a multiplayer Snake Game featuring a React frontend and a FastAPI backend.
+## Homework Answers
 
-## Structure
+### Question 1: Initial Implementation
+**Prompt:**
+"Implement a coding interview platform with React frontend and Express backend. It should support real-time code collaboration using Socket.io, syntax highlighting with Monaco Editor, and safe code execution using Pyodide for Python and eval for JavaScript."
 
-- `frontend/`: React application built with Vite.
-- `backend/`: FastAPI application.
+### Question 2: Integration Tests
+**Command:**
+`npm test` (runs Jest tests in the server directory)
 
-## Getting Started
+### Question 3: Running Both Client and Server
+**Command:**
+`npm run dev` (uses `concurrently` to run both client and server)
 
-### Prerequisites
+### Question 4: Syntax Highlighting
+**Library:**
+`@monaco-editor/react`
 
-- Docker and Docker Compose
-- Node.js (for local frontend development)
-- Python 3.11+ (for local backend development)
+### Question 5: Code Execution
+**Library:**
+`pyodide` (loaded via CDN for Python execution in browser)
 
-### Running with Docker
+### Question 6: Containerization
+**Base Image:**
+`node:18-alpine`
 
-```bash
-docker-compose up --build
-```
+### Question 7: Deployment
+**Service:**
+Render (or similar container hosting service)
 
-The frontend will be available at `http://localhost:5173` and the backend at `http://localhost:8000`.
+## How to Run
+
+1. Install dependencies:
+   ```bash
+   npm install
+   cd client && npm install
+   cd ../server && npm install
+   ```
+
+2. Run the application:
+   ```bash
+   npm run dev
+   ```
+
+3. Run with Docker:
+   ```bash
+   docker-compose up --build
+   ```
